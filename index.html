@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Piedra, Papel o Tijera</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('img/tablero.jpg');
+      background-size: cover;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    .game {
+      margin-top: 20px;
+    }
+    
+    .choices {
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    #sabiasQue {
+      width: 150px; /* Ajusta el tamaño de la imagen "Sabías que" según tus preferencias */
+      height: auto;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      background-color: transparent;
+      color: white;
+      border: 2px solid #2ecc71;
+      transition: background-color 0.3s ease-in-out;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    /* Estilos para los botones de redes sociales */
+    #social-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-button {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: filter 0.3s ease-in-out;
+    }
+
+    .social-button img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .social-button:hover {
+      filter: brightness(80%);
+    }
+
+    #footer {
+      margin-top: 20px;
+      color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <audio id="backgroundAudio" autoplay loop>
+    <source src="audio/audio1.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <div class="container">
+    <h1>Escoge Piedra, Papel o Tijera</h1>
+    
+    <div class="game">
+      <div class="choices">
+        <img src="img/piedra.png" alt="Piedra" onclick="playGame(0)">
+        <img src="img/papel.png" alt="Papel" onclick="playGame(1)">
+        <img src="img/tijera.png" alt="Tijera" onclick="playGame(2)">
+      </div>
+      <div class="result" id="result"></div>
+      <div class="stats" id="stats">Partidas Ganadas: 0 | Perdidas: 0 | Empatadas: 0</div>
+      <button id="audioToggle" onclick="toggleBackgroundAudio()">
+        <img src="img/audio.png" alt="Toggle Audio" id="audioIcon">
+      </button>
+      <!-- Imagen "Sabías que" con alerta -->
+      <img id="sabiasQue" src="img/sabias_que.png" alt="Sabías que" onclick="mostrarMensaje()">
+      <!-- Créditos del desarrollador -->
+      <p id="developerCredit">Desarrollado por Yoshio Geovanni García López</p>
+    </div>
+  </div>
+
+  <!-- Contenedor de botones de redes sociales -->
+  <div id="social-links">
+    <button class="social-button" onclick="window.open('https://www.facebook.com/geovanni212', '_blank')">
+      <img src="social_links/facebook.png" alt="Facebook">
+    </button>
+    <button class="social-button" onclick="window.open('https://www.instagram.com/ygeovannigl/', '_blank')">
+      <img src="social_links/instagram.png" alt="Instagram">
+    </button>
+    <button class="social-button" onclick="window.open('https://github.com/geovannigarcia95', '_blank')">
+      <img src="social_links/github.png" alt="GitHub">
+    </button>
+    <button class="social-button" onclick="window.open('https://twitter.com/PokerGeovanni', '_blank')">
+      <img src="social_links/twitter.png" alt="Twitter">
+    </button>
+    <button class="social-button" onclick="window.location.href='mailto:joshio.garcia86@outlook.com'">
+      <img src="social_links/outlook.png" alt="Outlook">
+    </button>
+    <button class="social-button" onclick="window.location.href='mailto:geovannipoker@gmail.com'">
+      <img src="social_links/gmail.png" alt="Gmail">
+    </button>
+  </div>
+
+  <script src="piedra_papel_o_tijera.js"></script>
+</body>
+</html>

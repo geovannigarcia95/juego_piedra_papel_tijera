@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('img/tablero.jpg');
+    background-size: cover;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .game {
+    margin-top: 20px;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  img {
+    width: 80px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto; /* Mantiene la proporción de aspecto */
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo para las imágenes del botón de audio */
+  #audioIcon {
+    width: 50px; /* Ajusta el tamaño según tus preferencias */
+    height: 50px; /* Ajusta el tamaño según tus preferencias */
+  }
+
+#developerCredit {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  #sabiasQue {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    cursor: pointer;
+  }
+  #social-links {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+    border: none;
+    background: none;
+}
+
+.social-button img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Ajusta las rutas de las imágenes según la carpeta social_links */
+.social-button img {
+    max-width: 100%;
+    max-height: 100%;
+    src: url('social_links/facebook.png'); /* Ruta relativa desde el archivo CSS */
+}
+
+.social-button:hover {
+    filter: brightness(80%);
+}
